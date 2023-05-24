@@ -1,10 +1,31 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Users from "./components/Users";
+import EditUser from "./components/EditUser";
+import AddUser from "./components/AddUser";
 
 const App = () => {
   return (
-    <div>
-      <h1>test</h1>
-    </div>
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={<Users />}
+        />
+        <Route
+          path="/edit/:id"
+          element={<EditUser />}
+        />
+        <Route
+          path="/add"
+          element={<AddUser />}
+        />
+        <Route
+          path="/delete/:id"
+          element={<Users />}
+        />
+      </Routes>
+    </>
   );
 };
 
