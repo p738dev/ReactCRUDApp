@@ -1,6 +1,11 @@
 import React from "react";
+import AddUser from "./AddUser";
 const Users = () => {
-  return <div>user</div>;
+  return (
+    <div>
+      <AddUser />
+    </div>
+  );
 };
 
 export default Users;

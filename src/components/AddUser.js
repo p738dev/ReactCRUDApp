@@ -13,9 +13,20 @@ const AddUser = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
+  //const [persons, setPersons] = useState([]);
+
+  const newPerson = (newPerson) => {
+    setPersons((prev) => [...prev, newPerson]);
+  };
 
   const savePerson = (e) => {
-    e.preventDefault();
+    e.preventDefault(e);
+    newPerson({
+      name: name,
+      email: email,
+      phone: phone,
+      country: country,
+    });
   };
 
   return (
@@ -32,21 +43,18 @@ const AddUser = () => {
         <StyledInput
           type="text"
           placeholder="Wprowadź email"
-          name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <StyledInput
           type="number"
           placeholder="Wprowadź numer telefonu"
-          name="phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
         <StyledInput
           type="text"
           placeholder="Kraj"
-          name="country"
           value={country}
           onChange={(e) => setCountry(e.target.value)}
         />
