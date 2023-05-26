@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { PersonContext } from "../context/personContext";
 
 import {
   StyledAddContainer,
@@ -9,11 +10,12 @@ import {
 } from "./AddUser.css";
 
 const AddUser = () => {
+  const { setPersons } = useContext(PersonContext);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
-  //const [persons, setPersons] = useState([]);
 
   const newPerson = (newPerson) => {
     setPersons((prev) => [...prev, newPerson]);
