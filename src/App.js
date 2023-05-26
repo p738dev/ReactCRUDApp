@@ -1,10 +1,13 @@
 import React from "react";
+import Users from "./components/Users";
+import GlobalStyle from "./globalStyles/GlobalStyles.css";
 
 const App = () => {
   return (
-    <div>
-      <h1>test</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Users />
+    </>
   );
 };
 
