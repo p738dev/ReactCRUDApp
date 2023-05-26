@@ -13,12 +13,12 @@ const App = () => {
           element={<Users />}
         />
         <Route
-          path="/edit/:id"
-          element={<EditUser />}
-        />
-        <Route
           path="/add"
           element={<AddUser />}
+        />
+        <Route
+          path="/edit/:id"
+          element={<EditUser />}
         />
         <Route
           path="/delete/:id"
